@@ -151,14 +151,65 @@ The dashboard is designed as a **narrative journey**:
 This storytelling flow ensures that **technical audiences** can explore correlations and statistical evidence, while **non‑technical audiences** can follow a clear storyline that connects abstract features (like tempo or danceability) to recognizable music. The combination of overview, analysis, and highlights makes the insights both **accessible and compelling**.
 
 ---
-
 ## 💡 Insights
-_(Explain the key insights derived from your analysis and how the dashboard communicates them visually.)_
+
+From analysing the Spotify dataset and exploring the dashboard, we were able to identify several interesting patterns about what makes certain songs more popular than others. These insights are based on the audio features, popularity scores, and trends across multiple genres.
+
+### **General Track Characteristics**
+- The average popularity across the dataset shows that most tracks fall into a “moderately popular” range rather than extremely high or low.
+- The majority of songs have an average tempo and duration, suggesting that extremely long or unusually fast/slow tracks are less common in mainstream listening.
+
+### **Danceability vs Popularity**
+One of our original expectations was that highly danceable songs would be more popular. However, the data showed the **opposite** trend.  
+There is a **small negative correlation**, meaning that in this dataset, tracks with higher danceability scores tended to have slightly lower popularity. This highlights how assumptions do not always match real data.
+
+### **Explicit vs Non-Explicit Songs**
+Popular belief might suggest that explicit songs are less likely to perform well. Our analysis showed that:
+- **Explicit songs are not significantly less popular**  
+- Both explicit and non-explicit songs have very similar popularity distributions  
+This means explicit content does not strongly influence how well a track performs.
+
+### **Tempo Ranges & Popularity**
+Tempo does appear to have a small influence on popularity:
+- Tracks with a **tempo above 130 BPM** had the highest average popularity  
+- The 110–130 BPM range, which is often seen as a “sweet spot” for energetic songs, was slightly lower  
+The effect is subtle, but it shows that faster songs may have a slight advantage in this dataset.
+
+### **Top 10 Most Popular Songs**
+The top tracks give a quick snapshot of what listeners responded to the most. These songs usually share common traits:
+- Clear production  
+- Strong rhythmic structure  
+- Recognisable artists  
+- Broad genre appeal  
+This section helps users connect the data back to real music they may know.
 
 ---
 
-## ⚖️ Ethics 
-_(Summarise ethical considerations — dataset licence, bias, privacy.)_
+Overall, the analysis shows that song popularity is influenced by multiple factors rather than a single feature. Danceability, tempo, and explicit content all play roles, but none of them alone can fully explain popularity. The dashboard helps users explore these relationships visually and understand how different characteristics interact.
+
+---
+## ⚖️ Ethics
+
+For this project, we used a public Spotify dataset from Kaggle that contains information about songs, their audio features, and popularity scores. The dataset does **not** include any personal listener data, so there are no privacy concerns or risks around identifying individuals. Everything we analysed is purely track-level information.
+
+While working on the project, we kept a few ethical points in mind:
+
+- **Dataset Source & Use:**  
+  The dataset is publicly available and shared for learning and analysis. We are using it fairly and giving full credit to the original creator on Kaggle.
+
+- **No Personal Data:**  
+  Since the data only includes details about songs and artists, it is safe to use and does not require any special permissions.
+
+- **Possible Bias in the Data:**  
+  The dataset may not represent all genres, regions, or artists equally. Some musical styles may appear more often than others, which means certain insights might lean toward the genres that are over-represented.
+
+- **Popularity Score Limitations:**  
+  Spotify’s popularity metric is based on their own internal system. This could favour certain artists, trends, or markets. For this reason, we treat popularity as an indicator, not a perfect measure.
+
+- **Responsible Interpretation:**  
+  When presenting insights, we avoid overstating results or suggesting causation where it doesn’t exist. Our analysis is based only on what the dataset shows, and we highlight limitations where needed.
+
+Overall, we made sure the data was used responsibly, respectfully, and within the boundaries of what the dataset allows. The goal of this project is purely educational, focused on building skills in ETL, analysis, visualisation, and teamwork.
 
 ---
 
