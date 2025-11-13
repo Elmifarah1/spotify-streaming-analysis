@@ -212,9 +212,43 @@ While working on the project, we kept a few ethical points in mind:
 Overall, we made sure the data was used responsibly, respectfully, and within the boundaries of what the dataset allows. The goal of this project is purely educational, focused on building skills in ETL, analysis, visualisation, and teamwork.
 
 ---
-
 ## 🧾 Version Control & Documentation
-_(Explain how the project was managed on GitHub — branching, commits, project board workflow, and README updates.)_
+
+We used Git and GitHub throughout the project to collaborate smoothly and keep all work organised. Each team member worked from their own dedicated branch to avoid conflicts and to keep changes clear and easy to track.
+
+### **Branches Used**
+Each member created a personal branch for their tasks:
+- **Marsella-branch** – ETL development, data cleaning, and data validation  
+- **Elmi-branch** – Project management, README development, documentation, and workflow setup  
+- **Andrea-branch** – Exploratory analysis, visualisations, and dashboard creation  
+
+Working from separate branches meant we could all build different parts of the project at the same time without interfering with each other’s files.
+
+### **Workflow**
+- We pulled the latest changes from `main` before starting new work.  
+- Each member committed frequently with clear messages to show progress.  
+- Once a piece of work was ready, it was pushed to GitHub and reviewed.  
+- We merged branches into `main` through pull requests after checking for conflicts and testing the changes.
+
+This ensured the codebase stayed clean and stable throughout the hackathon.
+
+### **Project Board Usage**
+We used a shared **GitHub Project Board** to manage tasks from start to finish. Our board included:
+- **Backlog** – All ideas and tasks we wanted to include  
+- **To Do** – Tasks ready to work on  
+- **In Progress** – Tasks actively being completed  
+- **Review / QA** – Items that needed checking before final approval  
+- **Done** – Completed tasks  
+
+We moved tasks across the board as we progressed, which helped us stay organised, divide work fairly, and keep track of deadlines.
+
+### **Documentation**
+- The README file was updated throughout the hackathon to reflect real progress.
+- All sections (ETL, analysis, dashboard, ethics, insights, etc.) were filled based on completed project work.
+- Screenshots, links, and explanations were added as the dashboard developed.
+- This helped ensure clarity for judges and made our workflow transparent from start to finish.
+
+Overall, version control and structured documentation helped us collaborate effectively, avoid issues, and stay aligned as a team while building the project.
 
 ---
 
