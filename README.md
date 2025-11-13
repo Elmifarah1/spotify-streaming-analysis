@@ -34,12 +34,12 @@ Through collaborative teamwork, the project demonstrates:
 ---
 
 ## 👥 Team Members
-| Name | Role | Focus Area |
-|:--|:--|:--|
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
+| Name | Role 
+|:--|:--|
+|Elmi Farah|Project Manager|
+|  |  |
+|  |  |
+|  |  |
 
 ---
 
@@ -126,5 +126,5 @@ _(Each team member can share what they learned, challenges faced, or how the col
 
 ---
 
-## 📚 References
+## 📚 Referencesgit 
 _(List dataset source, key libraries, and supporting resources.)
