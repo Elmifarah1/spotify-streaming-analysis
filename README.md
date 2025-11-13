@@ -36,7 +36,7 @@ Through collaborative teamwork, the project demonstrates:
 ## 👥 Team Members
 | Name | Role 
 |:--|:--|
-|Elmi Farah|Project Manager|
+|Elmi Farah|Project Manager |
 |  |  |
 |  |  |
 |  |  |
@@ -97,7 +97,59 @@ _(List your hypotheses, statistical tests, and any analytical models applied.)_
 ---
 
 ## 🖥️ Dashboard Design
-_(Outline the layout, visuals, and interactivity planned or implemented in the dashboard.)_
+This dashboard provides a comprehensive analysis of Spotify streaming data, focusing on what makes songs popular across genres and features. It is organized into three key sections, each designed to explore different dimensions of track characteristics and their influence on popularity.
+
+**[View Dashboard on Tableau Public](https://public.tableau.com/app/profile/andrea.ferreira4559/viz/Spotify-Analysis-Dashboard/Dashboard1)**
+
+---
+
+### 1. Overview & KPIs
+This section provides a snapshot of the dataset:
+
+- **Average Popularity:** Shows the mean popularity score across all tracks.  
+- **Average Duration:** Highlights the typical track length in milliseconds.  
+- **% Explicit Tracks:** Displays the proportion of songs flagged as explicit.  
+- **Average Tempo:** Summarizes the average beats per minute (BPM) across tracks.  
+
+---
+
+### 2. Hypothesis Testing
+This section investigates three hypotheses about track features and popularity:
+
+- **Hypothesis 1 — Danceability vs Popularity (Scatter Plot):**  
+  *Conclusion:* The scatter plot shows a statistically significant **negative correlation** between danceability and popularity. Contrary to the initial hypothesis, tracks with higher danceability scores tend to be less popular in this filtered dataset (Top 1200 tracks, 21 genres). The regression line slopes downward, and the p‑value confirms the relationship is not random.
+
+- **Hypothesis 2 — Explicit vs Non‑Explicit Songs (Box Plot):**  
+  *Conclusion:* Explicit songs are not significantly less popular than non‑explicit songs. Both categories show similar distributions, with non‑explicit songs having a tiny edge in median and maximum popularity.
+
+- **Hypothesis 3 — Popularity Distribution by Tempo Range (Bar Chart):**  
+  *Conclusion:* The analysis shows that songs above 130 BPM have the highest average popularity, while the hypothesized 110–130 BPM range is slightly lower. Tempo does influence popularity, but the effect is subtle across ranges.
+
+---
+
+### 3. Highlights
+This section emphasizes standout tracks:
+
+- **Top 10 Most Popular Tracks (Horizontal Bar Chart):**  
+  Displays track names (optionally with artists) ranked by Spotify popularity score.  
+  Provides an intuitive highlight of familiar songs, making the dashboard engaging for non‑technical audiences.
+
+---
+
+## Interactivity
+To enhance user exploration, the dashboard includes filters tailored to the dataset:
+
+- **Track Genre (Dropdown):** Explore popularity trends across different genres.  
+---
+
+### Storytelling
+The dashboard is designed as a **narrative journey**:
+
+- It begins with **KPIs** that set the stage, giving users a quick overview of the dataset.  
+- It then moves into **hypothesis testing**, where each chart challenges assumptions about what drives popularity — danceability, explicitness, and tempo.  
+- Finally, it concludes with **highlights**, showcasing the Top 10 tracks to connect insights back to familiar songs.  
+
+This storytelling flow ensures that **technical audiences** can explore correlations and statistical evidence, while **non‑technical audiences** can follow a clear storyline that connects abstract features (like tempo or danceability) to recognizable music. The combination of overview, analysis, and highlights makes the insights both **accessible and compelling**.
 
 ---
 
