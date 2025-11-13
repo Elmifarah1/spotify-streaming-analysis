@@ -36,10 +36,9 @@ Through collaborative teamwork, the project demonstrates:
 ## 👥 Team Members
 | Name | Role 
 |:--|:--|
-|Elmi Farah|Project Manager |
-|  |  |
-|  |  |
-|  |  |
+|Elmi Farah|Project Manager|
+|Marsella Gounaridou |Data Architect|
+|Andrea Ferreira Payares|Data Analyst|
 
 ---
 
