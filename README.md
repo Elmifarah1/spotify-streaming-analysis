@@ -24,11 +24,11 @@ Through collaborative teamwork, the project demonstrates:
 - [Exploratory Analysis](#-exploratory-analysis)
 - [Analytics & Hypotheses](#-analytics--hypotheses)
 - [Dashboard Design](#-dashboard-design)
-- [Storytelling & Insights](#-storytelling--insights)
+- [Insights](#-storytelling--insights)
 - [Ethics & Governance](#-ethics--governance)
 - [Version Control & Documentation](#-version-control--documentation)
 - [Presentation](#-presentation)
-- [Wrap-Up & Reflections](#-wrap-up--reflections)
+- [Reflections](#-wrap-up--reflections)
 - [References](#-references)
 
 ---
@@ -37,7 +37,7 @@ Through collaborative teamwork, the project demonstrates:
 | Name | Role 
 |:--|:--|
 |Elmi Farah|Project Manager|
-|Marsella Gounaridou |Data Architect|
+|Marsella Gounaridou|Data Architect|
 |Andrea Ferreira Payares|Data Analyst|
 
 ---
@@ -152,13 +152,13 @@ This storytelling flow ensures that **technical audiences** can explore correlat
 
 ---
 
-## 💡 Storytelling & Insights
+## 💡 Insights
 _(Explain the key insights derived from your analysis and how the dashboard communicates them visually.)_
 
 ---
 
-## ⚖️ Ethics & Governance
-_(Summarise ethical considerations — dataset licence, bias, privacy, and governance practices.)_
+## ⚖️ Ethics 
+_(Summarise ethical considerations — dataset licence, bias, privacy.)_
 
 ---
 
@@ -172,10 +172,10 @@ _(Add notes or a link to your final slides or demo once completed.)_
 
 ---
 
-## 🪞 Wrap-Up & Reflections
+## 🪞 Reflections
 _(Each team member can share what they learned, challenges faced, or how the collaboration went.)_
 
 ---
 
-## 📚 Referencesgit 
+## 📚 References 
 _(List dataset source, key libraries, and supporting resources.)
