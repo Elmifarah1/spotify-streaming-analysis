@@ -651,7 +651,7 @@ _(Add notes or a link to your final slides or demo once completed.)_
 ### Elmi Farah – Project Manager
 
 - **What I worked on:**  
-  Managed the project setup, GitHub workflow, project board, and overall documentation.
+  - Managed the project setup, GitHub workflow, project board, and overall documentation.
 
 - **What I learned:**  
   - Coordinating a team using branches and shared boards.  
