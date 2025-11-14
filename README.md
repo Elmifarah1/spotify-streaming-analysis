@@ -24,21 +24,21 @@ Through collaborative teamwork, the project demonstrates:
 - [Exploratory Analysis](#-exploratory-analysis)
 - [Analytics & Hypotheses](#-analytics--hypotheses)
 - [Dashboard Design](#-dashboard-design)
-- [Insights](#-storytelling--insights)
-- [Ethics & Governance](#-ethics--governance)
+- [Insights](#-insights)
+- [Ethics](#-ethics)
 - [Version Control & Documentation](#-version-control--documentation)
 - [Presentation](#-presentation)
-- [Reflections](#-wrap-up--reflections)
+- [Reflections](#-reflections)
 - [References](#-references)
 
 ---
 
 ## 👥 Team Members
-| Name | Role 
+| Name | Role |
 |:--|:--|
-|Elmi Farah|Project Manager|
-|Marsella Gounaridou|Data Architect|
-|Andrea Ferreira Payares|Data Analyst|
+| Elmi Farah | Project Manager |
+| Marsella Gounaridou | Data Architect |
+| Andrea Ferreira Payares | Data Analyst |
 
 ---
 
@@ -93,15 +93,15 @@ The dataset includes:
 
 ---
 
-## 1. 📁 Spotify Tracks Dataset
+### 1. 📁 Spotify Tracks Dataset
 
-### **File Used**
+#### **File Used**
 `tracks.csv` — local copy of the Kaggle dataset.
 
-### **Dimensions**
+#### **Dimensions**
 Approx. **114,000 rows × 20+ columns** (depending on dataset version).
 
-### **Key Columns**
+#### **Key Columns**
 
 | Column | Description |
 |--------|-------------|
@@ -120,7 +120,7 @@ Approx. **114,000 rows × 20+ columns** (depending on dataset version).
 | `speechiness` | Spoken-word presence |
 | `liveness` | Live performance probability |
 
-### **Removed / Unused Columns**
+#### **Removed / Unused Columns**
 Dropped to simplify analysis:
 - `time_signature`
 - `mode`
@@ -146,55 +146,43 @@ Below are the project’s three key hypotheses and summaries.
 
 ---
 
-# 🧪 Do Higher Danceability & Energy Lead to Higher Popularity?
+### 🧪 H1 — Do Higher Danceability & Energy Lead to Higher Popularity?
 
-## **Hypothesis**
+#### **Hypothesis**
 **H1:** Tracks with higher danceability and energy will have higher popularity.
 
 This tests whether rhythmic intensity and high-energy songs are more likely to be streamed.
 
----
-
-## **Summary of Findings**
+#### **Summary of Findings**
 
 - **Danceability** has a *very weak positive correlation* with popularity (~0.09).  
 - **Energy** has a *slightly negative* or near-zero correlation.  
 - **Overall:** Audio features alone do **not** strongly influence popularity.  
 - External factors (playlisting, marketing, artist fame) likely matter more.
 
----
-
-## **Conclusion**
+#### **Conclusion**
 ❌ **H1 is not supported.**  
 Higher danceability and energy do *not* strongly predict popularity.
 
----
+#### **Visual Evidence**
 
-## **Visual Evidence**
-
-### **1. Correlation Heatmap**
+**1. Correlation Heatmap**  
 Shows correlation values between popularity and audio features.
 
-**Interpretation:**  
-All values near zero → no meaningful predictive relationship.
+- All values near zero → no meaningful predictive relationship.  
 
 *(Insert heatmap image here.)*
 
----
-
-### **2. Hexbin Plot (Energy vs Popularity — Sample 500)**
+**2. Hexbin Plot (Energy vs Popularity — Sample 500)**  
 Uses the first 500 rows for visibility.
 
-**Interpretation:**  
 - Trend line slopes slightly downward  
 - No strong pattern  
 - Popularity stays mid-range regardless of energy  
 
 *(Insert hexbin plot here.)*
 
----
-
-## **Final Assessment**
+#### **Final Assessment**
 
 | Evidence Type | Result | Supports H1? |
 |---------------|--------|--------------|
@@ -204,17 +192,15 @@ Uses the first 500 rows for visibility.
 
 ---
 
-# 🧪 Explicit Tracks Are Less Popular Than Clean Tracks
+### 🧪 H2 — Explicit Tracks Are Less Popular Than Clean Tracks
 
-## **Hypothesis**
+#### **Hypothesis**
 **H2:** Explicit tracks have lower average popularity than clean tracks.
 
----
-
-## **Statistical Test**
+#### **Statistical Test**
 Welch’s t-test comparing explicit vs. non-explicit tracks.
 
-Replace values with your own prints:
+Replace values with your own results:
 - `n_explicit = X`  
 - `n_clean = Y`  
 - `t = t_value`  
@@ -227,52 +213,42 @@ Replace values with your own prints:
 - If **p < 0.05** → difference is statistically significant  
 - Cohen’s d shows effect size (small, medium, large)
 
----
+#### **Visual Evidence**
 
-## **Visual Evidence**
+- **Boxplot — Popularity by Explicit Flag:**  
+  Slightly higher median popularity for clean tracks.
 
-### **1. Boxplot — Popularity by Explicit Flag**
-Shows slightly higher median popularity for clean tracks.
+- **Histogram — Popularity Distribution:**  
+  Clean tracks dominate across most popularity ranges.
 
-### **2. Histogram — Popularity Distribution**
-Clean tracks dominate across most popularity ranges.
+- **Violin Plot (Plotly):**  
+  Clean tracks show a tighter distribution with a slightly higher central value.
 
-### **3. Violin Plot (Plotly)**
-Clean tracks show a tighter distribution with a slightly higher central value.
-
----
-
-## **Conclusion**
+#### **Conclusion**
 ✔️ **H2 is supported, but the effect is small.**  
 
 Explicit songs tend to be **slightly** less popular, but the difference is not dramatic.
 
 ---
 
-# 🧪 H3 — Genre Popularity Differences
-
-## **Hypothesis**
+### 🧪 H3 — Genre Popularity Differences
+ 
+#### **Hypothesis**
 Popularity differs significantly across genres.
 
----
-
-## **Statistical Test**
+#### **Statistical Test**
 One-way ANOVA on the top 8 most common genres.
 
-### **Result**
+**Result:**  
 The ANOVA test shows a significant difference between genre groups.  
 ✔️ **H3 is supported.**
 
----
+#### **Visual Analysis**
 
-## **Visual Analysis**
+- **Median Popularity by Genre (Bar Plot):**  
+  Shows which genres consistently perform better.
 
-### **Median Popularity by Genre (Bar Plot)**
-Shows which genres consistently perform better.
-
----
-
-## **Interpretation**
+#### **Interpretation**
 
 1. **Audio characteristics & popularity:**  
    Weak or inconsistent relationships.
@@ -290,9 +266,7 @@ Shows which genres consistently perform better.
 ### **1. Data Acquisition**
 - Downloaded from Kaggle  
 - Loaded via `pandas.read_csv()`  
-- Initial checks: shape, dtypes, distributions, missing values
-
----
+- Initial checks: shape, dtypes, distributions, missing values  
 
 ### **2. Data Cleaning & Preprocessing**
 
@@ -306,8 +280,6 @@ Shows which genres consistently perform better.
 
 Cleaned dataset saved to `data/processed/`.
 
----
-
 ### **3. Exploratory Data Analysis**
 Using:
 - Seaborn  
@@ -320,8 +292,6 @@ Focus areas:
 - Genre frequency  
 - Correlation structure  
 
----
-
 ### **4. Data Preparation**
 Prepared for:
 - Hypothesis testing  
@@ -333,8 +303,6 @@ Transformations:
 - Genre filtering  
 - Outlier removal  
 
----
-
 ### **5. Statistical Analysis**
 Techniques:
 - Correlation matrix  
@@ -345,8 +313,6 @@ Libraries:
 - SciPy  
 - NumPy  
 - Pandas  
-
----
 
 ### **6. Visualisation**
 Tools:
@@ -382,10 +348,10 @@ Visuals include:
 
 ## ⚙ Methodology Justification
 
-- Kaggle dataset is reliable and balanced  
+- Kaggle dataset is reliable and structured  
 - ETL ensures cleanliness for valid statistics  
-- EDA and tests validate relationships visually + numerically  
-- Reproducible and transparent workflow  
+- EDA and tests validate relationships visually and numerically  
+- Workflow is reproducible and transparent  
 
 ---
 
@@ -419,127 +385,183 @@ Visuals include:
 
 ---
 
-## 🤖 Generative AI Usage & Ethics
-- Used for documentation organisation  
-- Used for small explanations or debugging  
-- No code was written solely by AI  
-- Dataset contains **no personal data**
-
----
-
-## 📚 References
-
-**Spotify Dataset:**  
-https://www.kaggle.com/datasets/
-
-**Libraries:**  
-- Pandas  
-- NumPy  
-- Matplotlib  
-- Seaborn  
-- SciPy  
-
-**Stats:**  
-- Tukey, J. W. (1977). *Exploratory Data Analysis*
-
----
-
 ## 🔍 Exploratory Analysis
-_(Highlight early trends and patterns found in the data through descriptive statistics and visualisations.)_
+
+Before testing our hypotheses, we carried out exploratory data analysis (EDA) to understand the overall structure and behaviour of the Spotify tracks dataset. This helped us spot early patterns, check for issues, and decide which features were most useful for deeper analysis.
+
+### General Overview
+
+We started with some basic checks:
+
+- Looked at the **shape of the dataset** (rows and columns).  
+- Reviewed **data types** to make sure numeric fields (e.g. popularity, tempo, danceability) were correctly stored as numbers.  
+- Checked for **missing values** and duplicates, especially in key fields like `track_id` and `popularity`.  
+- Confirmed that popularity scores fell within the expected **0–100** range.  
+
+This initial step confirmed that the dataset was well structured and suitable for analysis after cleaning.
+
+### Distributions & Descriptive Statistics
+
+We then explored how key features are distributed:
+
+- **Popularity:** Most tracks sit in a “moderately popular” range rather than extremely high or low.  
+- **Tempo:** The majority of songs cluster around a typical BPM range, with fewer very slow or very fast tracks.  
+- **Duration:** Most tracks fall within a standard song length, with only a small number of very long or very short tracks.  
+
+We used summary statistics (mean, median, min, max) and histograms to spot outliers and skewed distributions.
+
+### Correlation Checks
+
+To understand how audio features relate to popularity, we created a **correlation heatmap** including variables such as:
+
+- popularity  
+- danceability  
+- energy  
+- valence  
+- tempo  
+
+The correlations with popularity were generally **weak**, which suggested that popularity cannot be explained by a single audio feature alone. This result helped guide our hypothesis testing and dashboard design.
+
+### Genre & Explicitness Patterns
+
+We also explored how tracks differ by:
+
+- **Genre:** Looked at the most common genres in the dataset and their average popularity.  
+- **Explicit flag:** Compared the number and proportion of explicit versus non-explicit tracks.  
+
+These early comparisons showed that:
+
+- Some genres appear more frequently and may influence overall trends.  
+- Explicit tracks form a clear subset that can be analysed separately when testing popularity differences.  
+
+### Visualisation Tools
+
+For EDA, we mainly used:
+
+- **Seaborn and Matplotlib** for histograms, boxplots, and correlation heatmaps.  
+- **Plotly** for interactive exploration when needed.  
+
+Overall, the exploratory analysis gave us a solid understanding of the dataset, highlighted potential limitations (such as weak correlations and genre imbalance), and helped us shape the three main hypotheses we tested later in the project.
 
 ---
 
 ## 📈 Analytics & Hypotheses
-_(List your hypotheses, statistical tests, and any analytical models applied.)_
+
+Our analysis focused on three main hypotheses:
+
+1. **H1 – Do higher danceability and energy lead to higher popularity?**  
+2. **H2 – Are explicit tracks less popular than clean tracks?**  
+3. **H3 – Does popularity differ significantly across genres?**  
+
+We combined **statistical tests** (correlations, Welch’s t-test, one-way ANOVA) with **visual analysis** to test these questions. The detailed results and interpretations are documented in the H1, H2, and H3 sections above.
 
 ---
 
 ## 🖥️ Dashboard Design
-This dashboard provides a comprehensive analysis of Spotify streaming data, focusing on what makes songs popular across genres and features. It is organized into three key sections, each designed to explore different dimensions of track characteristics and their influence on popularity.
+
+This dashboard provides a comprehensive analysis of Spotify streaming data, focusing on what makes songs popular across genres and features. It is organised into three key sections, each designed to explore different dimensions of track characteristics and their influence on popularity.
 
 **[View Dashboard on Tableau Public](https://public.tableau.com/app/profile/andrea.ferreira4559/viz/Spotify-Analysis-Dashboard/Dashboard1)**
 
 ---
 
 ### 1. Overview & KPIs
+
 This section provides a snapshot of the dataset:
 
-- **Average Popularity:** Shows the mean popularity score across all tracks.  
-- **Average Duration:** Highlights the typical track length in milliseconds.  
-- **% Explicit Tracks:** Displays the proportion of songs flagged as explicit.  
-- **Average Tempo:** Summarizes the average beats per minute (BPM) across tracks.  
+- **Average Popularity:** Mean popularity score across all tracks.  
+- **Average Duration:** Typical track length in milliseconds.  
+- **% Explicit Tracks:** Proportion of songs flagged as explicit.  
+- **Average Tempo:** Average beats per minute (BPM) across tracks.  
 
 ---
 
 ### 2. Hypothesis Testing
-This section investigates three hypotheses about track features and popularity:
+
+This section visualises the three core hypotheses:
 
 - **Hypothesis 1 — Danceability vs Popularity (Scatter Plot):**  
-  *Conclusion:* The scatter plot shows a statistically significant **negative correlation** between danceability and popularity. Contrary to the initial hypothesis, tracks with higher danceability scores tend to be less popular in this filtered dataset (Top 1200 tracks, 21 genres). The regression line slopes downward, and the p‑value confirms the relationship is not random.
+  *Conclusion:* The scatter plot shows a statistically significant **negative correlation** between danceability and popularity. Contrary to the initial hypothesis, tracks with higher danceability scores tend to be less popular in this filtered dataset (Top 1200 tracks, 21 genres). The regression line slopes downward, and the p-value confirms the relationship is not random.
 
-- **Hypothesis 2 — Explicit vs Non‑Explicit Songs (Box Plot):**  
-  *Conclusion:* Explicit songs are not significantly less popular than non‑explicit songs. Both categories show similar distributions, with non‑explicit songs having a tiny edge in median and maximum popularity.
+- **Hypothesis 2 — Explicit vs Non-Explicit Songs (Box Plot):**  
+  *Conclusion:* Explicit songs are not significantly less popular than non-explicit songs. Both categories show similar distributions, with non-explicit songs having a tiny edge in median and maximum popularity.
 
 - **Hypothesis 3 — Popularity Distribution by Tempo Range (Bar Chart):**  
-  *Conclusion:* The analysis shows that songs above 130 BPM have the highest average popularity, while the hypothesized 110–130 BPM range is slightly lower. Tempo does influence popularity, but the effect is subtle across ranges.
+  *Conclusion:* The analysis shows that songs above 130 BPM have the highest average popularity, while the hypothesised 110–130 BPM range is slightly lower. Tempo does influence popularity, but the effect is subtle across ranges.
 
 ---
 
 ### 3. Highlights
-This section emphasizes standout tracks:
+
+This section emphasises standout tracks:
 
 - **Top 10 Most Popular Tracks (Horizontal Bar Chart):**  
   Displays track names (optionally with artists) ranked by Spotify popularity score.  
-  Provides an intuitive highlight of familiar songs, making the dashboard engaging for non‑technical audiences.
+  Provides an intuitive highlight of familiar songs, making the dashboard engaging for non-technical audiences.
 
 ---
 
-## Interactivity
+### Interactivity
+
 To enhance user exploration, the dashboard includes filters tailored to the dataset:
 
 - **Track Genre (Dropdown):** Explore popularity trends across different genres.  
+
 ---
 
 ### Storytelling
+
 The dashboard is designed as a **narrative journey**:
 
 - It begins with **KPIs** that set the stage, giving users a quick overview of the dataset.  
 - It then moves into **hypothesis testing**, where each chart challenges assumptions about what drives popularity — danceability, explicitness, and tempo.  
 - Finally, it concludes with **highlights**, showcasing the Top 10 tracks to connect insights back to familiar songs.  
 
-This storytelling flow ensures that **technical audiences** can explore correlations and statistical evidence, while **non‑technical audiences** can follow a clear storyline that connects abstract features (like tempo or danceability) to recognizable music. The combination of overview, analysis, and highlights makes the insights both **accessible and compelling**.
+This storytelling flow ensures that **technical audiences** can explore correlations and statistical evidence, while **non-technical audiences** can follow a clear storyline that connects abstract features (like tempo or danceability) to recognisable music. The combination of overview, analysis, and highlights makes the insights both **accessible and compelling**.
 
 ---
+
 ## 💡 Insights
 
 From analysing the Spotify dataset and exploring the dashboard, we were able to identify several interesting patterns about what makes certain songs more popular than others. These insights are based on the audio features, popularity scores, and trends across multiple genres.
 
-### **General Track Characteristics**
-- The average popularity across the dataset shows that most tracks fall into a “moderately popular” range rather than extremely high or low.
-- The majority of songs have an average tempo and duration, suggesting that extremely long or unusually fast/slow tracks are less common in mainstream listening.
+### General Track Characteristics
 
-### **Danceability vs Popularity**
+- The average popularity across the dataset shows that most tracks fall into a “moderately popular” range rather than extremely high or low.  
+- The majority of songs have an average tempo and duration, suggesting that extremely long or unusually fast/slow tracks are less common in mainstream listening.  
+
+### Danceability vs Popularity
+
 One of our original expectations was that highly danceable songs would be more popular. However, the data showed the **opposite** trend.  
 There is a **small negative correlation**, meaning that in this dataset, tracks with higher danceability scores tended to have slightly lower popularity. This highlights how assumptions do not always match real data.
 
-### **Explicit vs Non-Explicit Songs**
+### Explicit vs Non-Explicit Songs
+
 Popular belief might suggest that explicit songs are less likely to perform well. Our analysis showed that:
+
 - **Explicit songs are not significantly less popular**  
 - Both explicit and non-explicit songs have very similar popularity distributions  
+
 This means explicit content does not strongly influence how well a track performs.
 
-### **Tempo Ranges & Popularity**
+### Tempo Ranges & Popularity
+
 Tempo does appear to have a small influence on popularity:
+
 - Tracks with a **tempo above 130 BPM** had the highest average popularity  
 - The 110–130 BPM range, which is often seen as a “sweet spot” for energetic songs, was slightly lower  
+
 The effect is subtle, but it shows that faster songs may have a slight advantage in this dataset.
 
-### **Top 10 Most Popular Songs**
+### Top 10 Most Popular Songs
+
 The top tracks give a quick snapshot of what listeners responded to the most. These songs usually share common traits:
+
 - Clear production  
 - Strong rhythmic structure  
 - Recognisable artists  
 - Broad genre appeal  
+
 This section helps users connect the data back to real music they may know.
 
 ---
@@ -547,6 +569,7 @@ This section helps users connect the data back to real music they may know.
 Overall, the analysis shows that song popularity is influenced by multiple factors rather than a single feature. Danceability, tempo, and explicit content all play roles, but none of them alone can fully explain popularity. The dashboard helps users explore these relationships visually and understand how different characteristics interact.
 
 ---
+
 ## ⚖️ Ethics
 
 For this project, we used a public Spotify dataset from Kaggle that contains information about songs, their audio features, and popularity scores. The dataset does **not** include any personal listener data, so there are no privacy concerns or risks around identifying individuals. Everything we analysed is purely track-level information.
@@ -571,28 +594,34 @@ While working on the project, we kept a few ethical points in mind:
 Overall, we made sure the data was used responsibly, respectfully, and within the boundaries of what the dataset allows. The goal of this project is purely educational, focused on building skills in ETL, analysis, visualisation, and teamwork.
 
 ---
+
 ## 🧾 Version Control & Documentation
 
 We used Git and GitHub throughout the project to collaborate smoothly and keep all work organised. Each team member worked from their own dedicated branch to avoid conflicts and to keep changes clear and easy to track.
 
-### **Branches Used**
+### Branches Used
+
 Each member created a personal branch for their tasks:
+
 - **Marsella-branch** – ETL development, data cleaning, and data validation  
 - **Elmi-branch** – Project management, README development, documentation, and workflow setup  
 - **Andrea-branch** – Exploratory analysis, visualisations, and dashboard creation  
 
 Working from separate branches meant we could all build different parts of the project at the same time without interfering with each other’s files.
 
-### **Workflow**
+### Workflow
+
 - We pulled the latest changes from `main` before starting new work.  
 - Each member committed frequently with clear messages to show progress.  
 - Once a piece of work was ready, it was pushed to GitHub and reviewed.  
-- We merged branches into `main` through pull requests after checking for conflicts and testing the changes.
+- We merged branches into `main` through pull requests after checking for conflicts and testing the changes.  
 
 This ensured the codebase stayed clean and stable throughout the hackathon.
 
-### **Project Board Usage**
+### Project Board Usage
+
 We used a shared **GitHub Project Board** to manage tasks from start to finish. Our board included:
+
 - **Backlog** – All ideas and tasks we wanted to include  
 - **To Do** – Tasks ready to work on  
 - **In Progress** – Tasks actively being completed  
@@ -601,25 +630,28 @@ We used a shared **GitHub Project Board** to manage tasks from start to finish. 
 
 We moved tasks across the board as we progressed, which helped us stay organised, divide work fairly, and keep track of deadlines.
 
-### **Documentation**
-- The README file was updated throughout the hackathon to reflect real progress.
-- All sections (ETL, analysis, dashboard, ethics, insights, etc.) were filled based on completed project work.
-- Screenshots, links, and explanations were added as the dashboard developed.
-- This helped ensure clarity for judges and made our workflow transparent from start to finish.
+### Documentation
 
-Overall, version control and structured documentation helped us collaborate effectively, avoid issues, and stay aligned as a team while building the project.
+- The README file was updated throughout the hackathon to reflect real progress.  
+- All sections (ETL, analysis, dashboard, ethics, insights, etc.) were filled based on completed project work.  
+- Screenshots, links, and explanations were added as the dashboard developed.  
+
+This helped ensure clarity for judges and made our workflow transparent from start to finish.
 
 ---
 
 ## 🗣️ Presentation
+
 _(Add notes or a link to your final slides or demo once completed.)_
 
 ---
 
 ## 🪞 Reflections
+
 _(Each team member can share what they learned, challenges faced, or how the collaboration went.)_
 
 ---
 
 ## 📚 References 
-_(List dataset source, key libraries, and supporting resources.)
+
+_(List dataset source, key libraries, and supporting resources.)_
