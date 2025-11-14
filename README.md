@@ -1,19 +1,5 @@
 # 🎵 Spotify Streaming Analysis — ETL, EDA, Statistical Testing & Dashboard
 
-## 📖 Overview
-
-This repository contains the work completed for the **Data Analytics with AI Hackathon: Dashboard Essentials**, focused on analysing Spotify track-level data to understand what drives a song’s popularity.
-
-From a data-analytics perspective, the project delivers:
-
-- A transparent **ETL and data-cleaning pipeline**
-- **Exploratory Data Analysis (EDA)**, including correlation analysis
-- **Hypothesis testing** using correlation, Welch’s t-test, and one-way ANOVA
-- An interactive **Tableau dashboard** to communicate findings
-- Supporting documentation on **data ethics, limitations, and tooling**
-- Collaborative development using **GitHub version control**
-
----
 
 # 🧩 Table of Contents
 
@@ -35,6 +21,26 @@ From a data-analytics perspective, the project delivers:
 - [Version Control & Collaboration](#-version-control--collaboration)  
 - [Reflections & Learning](#-reflections--learning)  
 - [References](#-references)
+
+---
+You can view the interactive dashboard here: https://public.tableau.com/app/profile/andrea.ferreira4559/viz/Spotify-Analysis-Dashboard/Dashboard1
+
+![Dashboard](https://github.com/user-attachments/assets/95d52e73-e820-4fbd-bf32-4b162c157534)
+
+
+
+## 📖 Overview
+
+This repository contains the work completed for the **Data Analytics with AI Hackathon: Dashboard Essentials**, focused on analysing Spotify track-level data to understand what drives a song’s popularity.
+
+From a data-analytics perspective, the project delivers:
+
+- A transparent **ETL and data-cleaning pipeline**
+- **Exploratory Data Analysis (EDA)**, including correlation analysis
+- **Hypothesis testing** using correlation, Welch’s t-test, and one-way ANOVA
+- An interactive **Tableau dashboard** to communicate findings
+- Supporting documentation on **data ethics, limitations, and tooling**
+- Collaborative development using **GitHub version control**
 
 ---
 
@@ -74,7 +80,7 @@ These are formalised as hypotheses H1–H3 in the **Hypothesis Testing** section
 
 ## Source
 
-- **Kaggle — Spotify Track and Audio Features Dataset**
+- **: — Spotify Track and Audio Features Dataset**
 - Downloaded manually and stored locally for ETL processing.
 
 ## File Used
@@ -201,6 +207,7 @@ A correlation heatmap between audio features and popularity revealed:
 | Acousticness   | ≈ 0                         | No strong association                   |
 | Other features | ≈ 0                         | All near-zero correlations              |
 
+
 **Key EDA conclusion:**  
 Audio features show **very weak linear correlations** with popularity, suggesting that popularity is heavily influenced by external factors (e.g., playlisting, artist fame, marketing) rather than the raw audio feature values alone.
 
@@ -240,6 +247,12 @@ This hypothesis assesses whether Spotify’s popularity score (0–100) increase
   - No meaningful correlation; slightly negative in this sample  
 - Heatmap shows **all correlations with popularity close to zero**
 - Hexbin plot trend line for energy vs popularity slopes **slightly downward**, confirming at best a weak negative relationship
+
+
+| Correlation Heatmap | Energy vs Popularity (Hexbin) |
+|---------------------|-------------------------------|
+| <img src="https://github.com/user-attachments/assets/378dc126-c177-4ab3-9ec3-182a0ad511a0" width="350"/> | <img src="https://github.com/user-attachments/assets/66137047-9202-45df-83e1-058c2752d139" width="350"/> |
+
 
 ### Conclusion
 
@@ -287,6 +300,12 @@ From the visuals and tests:
 - Distributions overlap substantially, indicating a **small but real effect**
 - Welch’s t-test indicates the difference is **statistically significant**, with a **small effect size**
 
+| Boxplot (Explicit vs Clean) | Histogram (Explicit vs Clean) |
+|-----------------------------|-------------------------------|
+| <img src="https://github.com/user-attachments/assets/0c268ca4-3557-46fb-a0e7-19a4870a6ee9" width="350"/> | <img src="https://github.com/user-attachments/assets/01402aeb-d02d-4b30-b358-a76d844f0537" width="350"/> |
+
+![violin](https://github.com/user-attachments/assets/59500c6d-06ca-4ef3-8493-5b9539c78120)
+
 ### Conclusion
 
 - **H2 is supported, but the effect is modest.**
@@ -318,6 +337,11 @@ This explores whether certain genres consistently achieve higher popularity scor
 - Median popularity by genre varies visibly:
   - Some genres consistently exhibit higher central tendency in popularity
   - Others are consistently lower, even when controlling for basic cleaning rules
+
+| Genre Popularity Lineplot | Genre Median Popularity Barplot |
+|---------------------------|----------------------------------|
+| <img src="https://github.com/user-attachments/assets/de2f8795-cb7c-4094-97da-24a7b56fb2eb" width="350"/> | <img src="https://github.com/user-attachments/assets/38f27ff5-db16-41bf-92a4-01f3e7530286" width="350"/> |
+
 
 ### Conclusion
 
@@ -356,6 +380,9 @@ The second section focuses on **feature-popularity relationships**, directly ref
 - Trend/regression line reveals a **slight negative or near-flat relationship** in the filtered top tracks
 - Confirms that simple “more danceable = more popular” assumptions do **not** hold strongly
 
+  ![Hypothesis 1 — Danceability vs Popularity (Scatter Plot)](https://github.com/user-attachments/assets/159c11da-21cc-4a76-b0f5-00f1c36a1d82)
+
+
 ### Explicit vs Non-Explicit (Box Plot)
 
 - Compares popularity distributions by `explicit` flag
@@ -380,6 +407,8 @@ Together, these visuals allow users to **explore correlations and distributions*
 - **Horizontal bar chart** of the **Top 10 tracks** by popularity
 - Presents a recognisable view of individual songs and artists
 - Connects abstract statistical observations back to real-world, well-known tracks
+
+![Top10 Most Popular Tracks ](https://github.com/user-attachments/assets/789013b2-9162-48e6-86af-afcde1d04ff9)
 
 ---
 
