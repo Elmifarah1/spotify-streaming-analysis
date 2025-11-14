@@ -648,10 +648,69 @@ _(Add notes or a link to your final slides or demo once completed.)_
 
 ## 🪞 Reflections
 
-_(Each team member can share what they learned, challenges faced, or how the collaboration went.)_
+### Elmi Farah – Project Manager
+
+- **What I worked on:**  
+  Managed the project setup, GitHub workflow, project board, and overall documentation.
+
+- **What I learned:**  
+  - Coordinating a team using branches and shared boards.  
+  - Writing clear project documentation for technical and non-technical readers.  
+
+- **Challenges:**  
+  - Keeping documentation aligned as the dashboard and analysis evolved.  
+  - Making sure everything matched the hackathon criteria.
+
+- **Going forward:**  
+  - Start documentation earlier.  
+  - Use more frequent mini check-ins to stay aligned.  
+
+
+### Marsella Gounaridou – Data Architect  
+
+- **What I worked on:**  
+- **What I learned:**  
+- **Challenges:**  
+- **Going forward:**  
+
+
+### Andrea Ferreira Payares – Data Analyst  
+ 
+- **What I worked on:**  
+- **What I learned:**  
+- **Challenges:**  
+- **Going forward:**  
 
 ---
 
 ## 📚 References 
 
-_(List dataset source, key libraries, and supporting resources.)_
+### 📁 Dataset
+- Pandya, M. (2020). *Spotify Songs Dataset*. Kaggle.  
+  https://www.kaggle.com/datasets/maharshipandya/-spotify-tracks-dataset
+
+### 📊 Dashboard
+- Tableau Public – Spotify Analysis Dashboard  
+  https://public.tableau.com/app/profile/andrea.ferreira4559/viz/Spotify-Analysis-Dashboard/Dashboard1
+
+### 🐍 Python Libraries
+- Pandas: https://pandas.pydata.org  
+- NumPy: https://numpy.org  
+- Matplotlib: https://matplotlib.org  
+- Seaborn: https://seaborn.pydata.org  
+- Plotly: https://plotly.com/python  
+- SciPy: https://scipy.org  
+- Scikit-learn: https://scikit-learn.org  
+
+### 📘 Documentation & Learning Resources
+- Tukey, J. W. (1977). *Exploratory Data Analysis.*  
+- Spotify Developer Documentation — Audio Features  
+  https://developer.spotify.com/documentation/web-api  
+- GitHub Docs — Branching, Pull Requests, Project Boards  
+  https://docs.github.com/
+
+### 🧰 Tools Used
+- Git & GitHub for version control  
+- VS Code for development  
+- Jupyter Notebook for analysis  
+- Tableau for dashboard and visualisation
