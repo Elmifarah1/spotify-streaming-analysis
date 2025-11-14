@@ -320,7 +320,7 @@ From the visuals and tests:
 
 > **H3:** Popularity differs significantly across genres.
 
-This explores whether certain genres consistently achieve higher popularity scores.
+This explores whether certain genres consistently achieve higher popularity scores, and whether broader musical characteristics (such as tempo) show systematic variation in popularity.
 
 ### Method
 
@@ -328,11 +328,13 @@ This explores whether certain genres consistently achieve higher popularity scor
 - Requirements:
   - Each genre group must contain **at least 30 tracks**
 - Visualisations:
+  - **Tempo vs Popularity (binned line plot)** showing whether popularity peaks around a “mid-tempo” region
   - **Seaborn bar plot** of median popularity by genre
   - Distribution plots to inspect variability within each genre
 
 ### Findings
 
+- The tempo plot shows a noticeable rise in popularity around 110–130 BPM, followed by declines at very low or high tempos, supporting a non-linear “sweet spot” effect.
 - One-way ANOVA returns a **statistically significant result** (p < 0.05)
 - Median popularity by genre varies visibly:
   - Some genres consistently exhibit higher central tendency in popularity
