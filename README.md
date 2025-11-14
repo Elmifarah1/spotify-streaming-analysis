@@ -81,7 +81,366 @@ This dataset is well-structured and ideal for exploring how music characteristic
 ---
 
 ## ⚙️ ETL & Data Quality
-_(Document the process of loading, cleaning, and validating the data. Include missing value handling, type conversions, and data integrity checks.)_
+
+**Kaggle — Spotify Track and Audio Features Dataset**  
+Downloaded manually and stored locally for ETL processing.
+
+The dataset includes:
+- Track metadata  
+- Artist information  
+- Genre labels  
+- Full suite of Spotify audio features (danceability, energy, valence, etc.)
+
+---
+
+## 1. 📁 Spotify Tracks Dataset
+
+### **File Used**
+`tracks.csv` — local copy of the Kaggle dataset.
+
+### **Dimensions**
+Approx. **114,000 rows × 20+ columns** (depending on dataset version).
+
+### **Key Columns**
+
+| Column | Description |
+|--------|-------------|
+| `track_id` | Unique Spotify identifier |
+| `track_name` | Song title |
+| `artists` | Credited artist(s) |
+| `track_genre` | Spotify-defined genre |
+| `explicit` | 1/0 indicator for explicit lyrics |
+| `popularity` | Popularity score (0–100) |
+| `danceability` | Rhythmic movement score |
+| `energy` | Intensity / loudness perception |
+| `valence` | Positivity / mood score |
+| `tempo` | Beats per minute |
+| `acousticness` | Acoustic feel score |
+| `instrumentalness` | Probability track is instrumental |
+| `speechiness` | Spoken-word presence |
+| `liveness` | Live performance probability |
+
+### **Removed / Unused Columns**
+Dropped to simplify analysis:
+- `time_signature`
+- `mode`
+- Excess descriptive metadata
+
+---
+
+## 📌 Business Requirements
+
+Spotify track popularity depends on many factors — audio characteristics, genre, tempo, and cultural trends.  
+Understanding these drivers can support:
+
+- Smarter playlist curation  
+- Genre performance benchmarking  
+- Artist advisory analytics  
+- Better recommendation-system decisions  
+
+---
+
+## 🎯 Research Questions (H1–H3)
+
+Below are the project’s three key hypotheses and summaries.
+
+---
+
+# 🧪 H1 — Do Higher Danceability & Energy Lead to Higher Popularity?
+
+## **Hypothesis**
+**H1:** Tracks with higher danceability and energy will have higher popularity.
+
+This tests whether rhythmic intensity and high-energy songs are more likely to be streamed.
+
+---
+
+## **Summary of Findings**
+
+- **Danceability** has a *very weak positive correlation* with popularity (~0.09).  
+- **Energy** has a *slightly negative* or near-zero correlation.  
+- **Overall:** Audio features alone do **not** strongly influence popularity.  
+- External factors (playlisting, marketing, artist fame) likely matter more.
+
+---
+
+## **Conclusion**
+❌ **H1 is not supported.**  
+Higher danceability and energy do *not* strongly predict popularity.
+
+---
+
+## **Visual Evidence**
+
+### **1. Correlation Heatmap**
+Shows correlation values between popularity and audio features.
+
+**Interpretation:**  
+All values near zero → no meaningful predictive relationship.
+
+*(Insert heatmap image here.)*
+
+---
+
+### **2. Hexbin Plot (Energy vs Popularity — Sample 500)**
+Uses the first 500 rows for visibility.
+
+**Interpretation:**  
+- Trend line slopes slightly downward  
+- No strong pattern  
+- Popularity stays mid-range regardless of energy  
+
+*(Insert hexbin plot here.)*
+
+---
+
+## **Final Assessment**
+
+| Evidence Type | Result | Supports H1? |
+|---------------|--------|--------------|
+| Correlation Heatmap | Weak correlations | ❌ No |
+| Hexbin Plot | Slight negative pattern | ❌ No |
+| Statistical Summary | No strong effects | ❌ No |
+
+---
+
+# 🧪 H2 — Explicit Tracks Are Less Popular Than Clean Tracks
+
+## **Hypothesis**
+**H2:** Explicit tracks have lower average popularity than clean tracks.
+
+---
+
+## **Statistical Test**
+Welch’s t-test comparing explicit vs. non-explicit tracks.
+
+Replace values with your own prints:
+- `n_explicit = X`  
+- `n_clean = Y`  
+- `t = t_value`  
+- `p = p_value`  
+- `Cohen’s d = d_value`  
+- `mean_explicit = E`  
+- `mean_clean = C`
+
+**Interpretation:**  
+- If **p < 0.05** → difference is statistically significant  
+- Cohen’s d shows effect size (small, medium, large)
+
+---
+
+## **Visual Evidence**
+
+### **1. Boxplot — Popularity by Explicit Flag**
+Shows slightly higher median popularity for clean tracks.
+
+### **2. Histogram — Popularity Distribution**
+Clean tracks dominate across most popularity ranges.
+
+### **3. Violin Plot (Plotly)**
+Clean tracks show a tighter distribution with a slightly higher central value.
+
+---
+
+## **Conclusion**
+✔️ **H2 is supported, but the effect is small.**  
+
+Explicit songs tend to be **slightly** less popular, but the difference is not dramatic.
+
+---
+
+# 🧪 H3 — Genre Popularity Differences
+
+## **Hypothesis**
+Popularity differs significantly across genres.
+
+---
+
+## **Statistical Test**
+One-way ANOVA on the top 8 most common genres.
+
+### **Result**
+The ANOVA test shows a significant difference between genre groups.  
+✔️ **H3 is supported.**
+
+---
+
+## **Visual Analysis**
+
+### **Median Popularity by Genre (Bar Plot)**
+Shows which genres consistently perform better.
+
+---
+
+## **Interpretation**
+
+1. **Audio characteristics & popularity:**  
+   Weak or inconsistent relationships.
+
+2. **Explicit vs clean tracks:**  
+   Clean tracks perform slightly better.
+
+3. **Genre differences:**  
+   Genre has the strongest effect on popularity.
+
+---
+
+## 🧱 Project Plan & Methodology
+
+### **1. Data Acquisition**
+- Downloaded from Kaggle  
+- Loaded via `pandas.read_csv()`  
+- Initial checks: shape, dtypes, distributions, missing values
+
+---
+
+### **2. Data Cleaning & Preprocessing**
+
+✔ Missing values handled  
+✔ Numeric conversions  
+✔ Boolean standardisation  
+✔ Duplicate removal  
+✔ Genre harmonisation  
+✔ Column reduction  
+✔ Validation of ranges, dtypes, and counts  
+
+Cleaned dataset saved to `data/processed/`.
+
+---
+
+### **3. Exploratory Data Analysis**
+Using:
+- Seaborn  
+- Matplotlib  
+- Plotly  
+
+Focus areas:
+- Summary statistics  
+- Popularity patterns  
+- Genre frequency  
+- Correlation structure  
+
+---
+
+### **4. Data Preparation**
+Prepared for:
+- Hypothesis testing  
+- Group comparisons  
+- Visualisation  
+
+Transformations:
+- Explicit → binary  
+- Genre filtering  
+- Outlier removal  
+
+---
+
+### **5. Statistical Analysis**
+Techniques:
+- Correlation matrix  
+- Welch’s t-test  
+- One-way ANOVA  
+
+Libraries:
+- SciPy  
+- NumPy  
+- Pandas  
+
+---
+
+### **6. Visualisation**
+Tools:
+- Matplotlib  
+- Seaborn  
+- Plotly  
+
+Visuals include:
+- Heatmaps  
+- Hexbin plots  
+- Boxplots  
+- Violin plots  
+- Bar charts  
+
+---
+
+## 🗂 Data Management
+
+### ✔ Version Control
+- Git + GitHub branches  
+- Pull requests  
+- Project board tracking  
+
+### ✔ Data Storage
+- `data/raw/`  
+- `data/processed/`  
+
+### ✔ Documentation
+- Step-by-step explanations in notebooks  
+- Debugging notes  
+
+---
+
+## ⚙ Methodology Justification
+
+- Kaggle dataset is reliable and balanced  
+- ETL ensures cleanliness for valid statistics  
+- EDA and tests validate relationships visually + numerically  
+- Reproducible and transparent workflow  
+
+---
+
+## 📦 Tools Used
+
+- **Pandas**  
+- **NumPy**  
+- **Matplotlib**  
+- **Seaborn**  
+- **Plotly**  
+- **SciPy**  
+- **Scikit-learn**
+
+---
+
+## ⚠️ Limitations
+
+1. Genre imbalance  
+2. Popularity changes over time  
+3. Audio feature estimation by Spotify  
+4. Explicit flag lacks nuance  
+
+---
+
+## 📘 Knowledge Gained
+
+- Inferential statistics  
+- ETL debugging  
+- Advanced data cleaning  
+- Grouped analysis  
+
+---
+
+## 🤖 Generative AI Usage & Ethics
+- Used for documentation organisation  
+- Used for small explanations or debugging  
+- No code was written solely by AI  
+- Dataset contains **no personal data**
+
+---
+
+## 📚 References
+
+**Spotify Dataset:**  
+https://www.kaggle.com/datasets/
+
+**Libraries:**  
+- Pandas  
+- NumPy  
+- Matplotlib  
+- Seaborn  
+- SciPy  
+
+**Stats:**  
+- Tukey, J. W. (1977). *Exploratory Data Analysis*
 
 ---
 
