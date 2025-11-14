@@ -146,7 +146,7 @@ Below are the project’s three key hypotheses and summaries.
 
 ---
 
-# 🧪 H1 — Do Higher Danceability & Energy Lead to Higher Popularity?
+# 🧪 Do Higher Danceability & Energy Lead to Higher Popularity?
 
 ## **Hypothesis**
 **H1:** Tracks with higher danceability and energy will have higher popularity.
@@ -204,7 +204,7 @@ Uses the first 500 rows for visibility.
 
 ---
 
-# 🧪 H2 — Explicit Tracks Are Less Popular Than Clean Tracks
+# 🧪 Explicit Tracks Are Less Popular Than Clean Tracks
 
 ## **Hypothesis**
 **H2:** Explicit tracks have lower average popularity than clean tracks.
